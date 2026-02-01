@@ -2,6 +2,7 @@
  * Test Helpers
  * 
  * Utility functions for common test operations
+ * @version 1.0.1
  */
 
 import { Page } from 'playwright';
@@ -11,9 +12,11 @@ import { Page } from 'playwright';
  * Use sparingly - prefer waiting for specific conditions
  * @param ms - Milliseconds to wait
  */
+
 export const sleep = (ms: number): Promise<void> => {
   return new Promise(resolve => setTimeout(resolve, ms));
 };
+ 
 
 /**
  * Retry a function until it succeeds or max retries reached
@@ -21,7 +24,7 @@ export const sleep = (ms: number): Promise<void> => {
  * 
  * @param fn - The async function to retry
  * @param maxRetries - Maximum number of retry attempts
- * @param delayMs - Delay between retries in milliseconds
+ * @param delayMs - Delay between retries in millisecond
  */
 export async function retry<T>(
   fn: () => Promise<T>,

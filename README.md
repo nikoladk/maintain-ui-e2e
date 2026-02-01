@@ -177,19 +177,11 @@ Then the following content should be displayed:
 
 ### Cucumber Configuration (`cucumber.js`)
 
-Modify test behavior, timeouts, and report settings.
+Modify test behavior, timeouts, and report settings
 
 ### Playwright Configuration (`playwright.config.ts`)
-
-Configure browser settings, viewports, and recording options.
-
-## 🤝 Contributing
 
 1. Create feature files in `features/` directory
 2. Implement page objects in `src/pages/` 
 3. Create step definitions in `src/steps/`
 4. Follow existing naming conventions and patterns
-
-## 📄 License
-
-ISC License

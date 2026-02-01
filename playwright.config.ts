@@ -35,7 +35,7 @@ const config: PlaywrightTestConfig = {
     baseURL: 'https://www.epam.com',
     
     // Browser options
-    headless: true,
+    headless: false,
     
     // Viewport size
     viewport: { width: 1920, height: 1080 },
