@@ -1,0 +1,37 @@
+{
+  "name": "maintain-ui-e2e",
+  "version": "1.0.0",
+  "description": "E2E UI test automation framework using Playwright and Cucumber BDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:headed": "cross-env HEADED=true cucumber-js --config cucumber.js",
+    "test:debug": "cross-env DEBUG=true cucumber-js --config cucumber.js",
+    "lint": "eslint src/**/*.ts features/**/*.ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "e2e",
+    "testing"
+  ],
+  "author": "EPAM",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.1.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.10.0",
+    "cross-env": "^7.0.3",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "playwright": "^1.50.0"
+  },
+  "overrides": {
+    "glob": "^10.0.0"
+  }
+}
