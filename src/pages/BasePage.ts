@@ -25,7 +25,7 @@ export abstract class BasePage {
    */
   async navigate(path: string = '/'): Promise<void> {
     const url = `${this.baseUrl}${path}`;
-    await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+    await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
   }
 
   /**
@@ -33,7 +33,12 @@ export abstract class BasePage {
    * Handles network idle state and key page elements
    */
   async waitForPageLoad(): Promise<void> {
-    await this.page.waitForLoadState('networkidle');
+    try {
+      await this.page.waitForLoadState('networkidle', { timeout: 30000 });
+    } catch {
+      // networkidle can be flaky in CI, fallback to load state
+      await this.page.waitForLoadState('load');
+    }
   }
 
   /**
