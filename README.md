@@ -183,13 +183,3 @@ Modify test behavior, timeouts, and report settings.
 
 Configure browser settings, viewports, and recording options.
 
-## 🤝 Contributing
-
-1. Create feature files in `features/` directory
-2. Implement page objects in `src/pages/` 
-3. Create step definitions in `src/steps/`
-4. Follow existing naming conventions and patterns
-
-## 📄 License
-
-ISC License
