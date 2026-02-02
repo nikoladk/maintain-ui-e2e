@@ -16,7 +16,7 @@ Feature: Contact Us Section Verification
   Scenario: Verify footer contains expected sections
     When the user scrolls to the footer
     Then the footer should contain the following text:
-      | Text           |
-      | OUR BRANDS     |
-      | SOCIAL         |
-      | CONTACT        |
+      | Text       |
+      | OUR BRANDS |
+      | SOCIAL     |
+      | SUBSCRIBE  |
