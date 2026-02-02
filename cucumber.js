@@ -46,7 +46,7 @@ const config = {
   // Timeout for each step (in milliseconds)
   // Note: Individual step timeouts can be set in hooks
   worldParameters: {
-    baseUrl: 'https://www.epam.com',
+    baseUrl: 'https://demo.nopcommerce.com',
     defaultTimeout: 30000
   }
 };
