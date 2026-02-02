@@ -19,4 +19,4 @@ Feature: Contact Us Section Verification
       | Text           |
       | OUR BRANDS     |
       | SOCIAL         |
-      | SUBSCRIBE      |
+      | CONTACT        |
