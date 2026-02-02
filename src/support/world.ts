@@ -46,7 +46,7 @@ export class CustomWorld extends World {
     
     // Extract world parameters from cucumber config
     const params = options.parameters as CustomWorldParameters;
-    this.baseUrl = params?.baseUrl || 'https://www.epam.com';
+    this.baseUrl = params?.baseUrl || 'https://demo.nopcommerce.com';
     this.defaultTimeout = params?.defaultTimeout || 30000;
   }
 
