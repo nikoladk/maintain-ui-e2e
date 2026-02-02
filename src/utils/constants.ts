@@ -9,37 +9,37 @@
  * Application URLs
  */
 export const URLS = {
-  BASE_URL: 'https://www.epam.com',
-  SERVICES: 'https://www.epam.com/services',
-  INDUSTRIES: 'https://www.epam.com/industries',
-  INSIGHTS: 'https://www.epam.com/insights',
-  ABOUT: 'https://www.epam.com/about',
-  CAREERS: 'https://www.epam.com/careers'
+  BASE_URL: 'https://demo.nopcommerce.com',
+  COMPUTERS: 'https://demo.nopcommerce.com/computers',
+  ELECTRONICS: 'https://demo.nopcommerce.com/electronics',
+  APPAREL: 'https://demo.nopcommerce.com/apparel',
+  DIGITAL_DOWNLOADS: 'https://demo.nopcommerce.com/digital-downloads',
+  BOOKS: 'https://demo.nopcommerce.com/books',
+  JEWELRY: 'https://demo.nopcommerce.com/jewelry',
+  GIFT_CARDS: 'https://demo.nopcommerce.com/gift-cards'
 } as const;
 
 /**
  * Expected Navigation Tabs
  */
 export const NAVIGATION_TABS = [
-  'Services',
-  'Industries',
-  'Insights',
-  'About',
-  'Careers'
+  'Computers',
+  'Electronics',
+  'Apparel',
+  'Digital downloads',
+  'Books',
+  'Jewelry',
+  'Gift Cards'
 ] as const;
 
 /**
- * EPAM Global Headquarters Information
+ * nopCommerce Footer Information
  */
-export const HEADQUARTERS = {
-  LABEL: 'GLOBAL HEADQUARTERS',
-  STREET: '41 University Drive',
-  SUITE: 'Suite 202',
-  CITY: 'Newtown',
-  STATE: 'PA',
-  ZIP: '18940',
-  COUNTRY: 'USA',
-  FULL_ADDRESS: '41 University Drive Suite 202, Newtown, PA 18940 USA'
+export const FOOTER_SECTIONS = {
+  INFORMATION: 'INFORMATION',
+  CUSTOMER_SERVICE: 'CUSTOMER SERVICE',
+  MY_ACCOUNT: 'MY ACCOUNT',
+  FOLLOW_US: 'FOLLOW US'
 } as const;
 
 /**

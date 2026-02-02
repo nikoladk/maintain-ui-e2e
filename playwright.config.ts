@@ -32,7 +32,7 @@ const config: PlaywrightTestConfig = {
   // Shared settings for all tests
   use: {
     // Base URL for navigation
-    baseURL: 'https://www.epam.com',
+    baseURL: 'https://demo.nopcommerce.com',
     
     // Browser options
     headless: false,
