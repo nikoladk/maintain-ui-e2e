@@ -14,18 +14,32 @@ export abstract class BasePage {
   protected readonly page: Page;
   protected readonly baseUrl: string;
 
-  constructor(page: Page, baseUrl: string = 'https://www.epam.com') {
+  constructor(page: Page, baseUrl: string = 'https://demo.nopcommerce.com') {
     this.page = page;
     this.baseUrl = baseUrl;
   }
 
   /**
    * Navigate to a specific path on the website
+   * Includes retry logic for flaky CI environments
    * @param path - The path to navigate to (relative to base URL)
    */
   async navigate(path: string = '/'): Promise<void> {
     const url = `${this.baseUrl}${path}`;
-    await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    const maxRetries = 2;
+    
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+        return;
+      } catch (error) {
+        if (attempt === maxRetries) {
+          throw error;
+        }
+        // Wait before retrying
+        await this.page.waitForTimeout(2000);
+      }
+    }
   }
 
   /**
