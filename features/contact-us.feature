@@ -1,22 +1,18 @@
-@contact @smoke
-Feature: Contact Us Section Verification
-  As a user visiting the EPAM website
-  I want to see the Contact Us link and footer information
-  So that I can find ways to contact EPAM
+@footer @smoke
+Feature: Footer Verification
+  As a user visiting the nopCommerce demo website
+  I want to see the footer information
+  So that I can find useful links and information
 
   Background:
-    Given the user navigates to the EPAM website
+    Given the user navigates to the nopCommerce website
 
-  @contact-link
-  Scenario: Verify Contact Us link exists
-    When the homepage is fully loaded
-    Then a "Contact" link should exist on the page
-
-  @footer
+  @footer-info
   Scenario: Verify footer contains expected sections
     When the user scrolls to the footer
     Then the footer should contain the following text:
-      | Text           |
-      | OUR BRANDS     |
-      | SOCIAL         |
-      | CONTACT        |
+      | Text              |
+      | INFORMATION       |
+      | CUSTOMER SERVICE  |
+      | MY ACCOUNT        |
+      | FOLLOW US         |

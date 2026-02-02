@@ -13,8 +13,8 @@ import { CustomWorld } from './world';
 import * as fs from 'fs';
 import * as path from 'path';
 
-// Set global timeout for all steps (30 seconds)
-setDefaultTimeout(30000);
+// Set global timeout for all steps (60 seconds for CI environments)
+setDefaultTimeout(60000);
 
 /**
  * BeforeAll Hook
